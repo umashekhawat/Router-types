@@ -1,0 +1,394 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #293629;
+  background: #f3f0e4;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f3f0e4;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1100px, 92%);
+  margin: 38px auto;
+  overflow: hidden;
+  background: #fbf8ee;
+  border: 1px solid #d9d5c4;
+  box-shadow: 0 18px 55px #28352412;
+}
+
+.hero {
+  position: relative;
+  padding: 30px 7% 22px;
+  color: #f7f3e7;
+  background: #354631;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  right: -70px;
+  top: 35px;
+  border: 1px solid #ffffff19;
+  border-radius: 50%;
+  box-shadow: 0 0 0 25px #ffffff08,
+              0 0 0 55px #ffffff06;
+  pointer-events: none;
+}
+
+.brand,
+.hero-footer,
+.section-heading,
+.panel-heading,
+.location-bar,
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.brand {
+  justify-content: flex-start;
+  gap: 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #d5d9c4;
+  font-weight: 700;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #aeb89a;
+  color: #f5f0df;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 48px 0 44px;
+}
+
+.eyebrow {
+  display: block;
+  color: #78845f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero .eyebrow {
+  color: #c1cba9;
+}
+
+.hero h1 {
+  margin: 13px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 7vw, 70px);
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.hero h1 em {
+  color: #d1d8b9;
+  font-weight: 600;
+}
+
+.hero-content p {
+  max-width: 420px;
+  color: #d9dece;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.hero-footer {
+  position: relative;
+  z-index: 1;
+  padding-top: 18px;
+  border-top: 1px solid #ffffff28;
+  color: #c8d0b9;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.workspace {
+  padding: 38px 7% 20px;
+}
+
+.section-heading {
+  margin-bottom: 23px;
+}
+
+.section-heading h2,
+.comparison h2 {
+  margin: 8px 0 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.live-label {
+  color: #586747;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.router-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.router-tabs button {
+  padding: 15px 10px;
+  color: #45523b;
+  background: #efeddf;
+  border: 1px solid #ddd9c9;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.router-tabs button span {
+  display: block;
+  margin-bottom: 6px;
+  color: #8b9279;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.router-tabs button:hover,
+.router-tabs button.active {
+  color: #fbf8ee;
+  background: #4a5b40;
+  border-color: #4a5b40;
+}
+
+.router-tabs button.active span {
+  color: #d0d8b7;
+}
+
+.demo-panel {
+  padding: 25px;
+  border: 1px solid #d9d5c4;
+  background: #f7f4e9;
+}
+
+.panel-heading {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.panel-heading h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7d8a58;
+}
+
+.type-tag {
+  margin-left: auto;
+  padding: 6px 9px;
+  border: 1px solid #c9ceb9;
+  color: #596749;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.demo-panel > p {
+  color: #777a69;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 17px 0;
+  margin-top: 14px;
+  border-top: 1px solid #dedbcd;
+  border-bottom: 1px solid #dedbcd;
+}
+
+.nav-links a {
+  padding: 9px 14px;
+  color: #40513a;
+  background: #eae9d9;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: #fffaf0;
+  background: #68764f;
+}
+
+.location-bar {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 18px 0;
+  color: #727764;
+  font-size: 11px;
+}
+
+.location-bar code {
+  padding: 7px 10px;
+  color: #354631;
+  background: #e7e8d8;
+  overflow-wrap: anywhere;
+}
+
+.page-content {
+  min-height: 155px;
+  padding: 25px;
+  background: #fffdf5;
+  border-left: 3px solid #7a865c;
+}
+
+.page-content h2 {
+  margin: 12px 0;
+  color: #354631;
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+}
+
+.page-content p {
+  max-width: 500px;
+  color: #707466;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.example-url {
+  margin-top: 18px;
+  padding: 12px;
+  color: #626c50;
+  background: #ececdd;
+  font-family: monospace;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.comparison {
+  padding: 38px 0 30px;
+}
+
+.comparison h2 {
+  margin-bottom: 20px;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.comparison-grid article {
+  padding: 18px 14px;
+  border: 1px solid #dedbcd;
+  background: #f6f3e7;
+}
+
+.comparison-grid h3 {
+  margin: 0 0 10px;
+  color: #40513a;
+  font-size: 13px;
+}
+
+.comparison-grid p {
+  margin: 0;
+  color: #777a69;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.app-footer {
+  padding: 18px 0 5px;
+  border-top: 1px solid #dedbcd;
+  color: #858774;
+  font-size: 9px;
+  letter-spacing: 1px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    width: 96%;
+    margin: 12px auto;
+  }
+
+  .hero,
+  .workspace {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .hero-content {
+    padding: 38px 0;
+  }
+
+  .router-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .router-tabs button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .router-tabs button span {
+    margin: 0;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-panel {
+    padding: 16px;
+  }
+
+  .hero-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
